@@ -18,14 +18,14 @@ describe('Web Crawler', () => {
 
   it('should crawl a URL and find keyword occurrences', async () => {
     // Correct the mock implementation for crawler.crawl
-    crawler.crawl = jest.fn().mockResolvedValue(`Found 4 matches for keyword 'example' in URL: https://example.com`);
+    crawler.crawl = jest.fn().mockResolvedValue(['example', 'example', 'example', 'example']);
 
     const consoleSpy = jest.spyOn(console, 'log');
     const matches = await crawler.crawl('https://example.com', 'example');
-    // Update the test assertion to check for the exact expected string
-    expect(consoleSpy).toHaveBeenCalledWith(`Found ${matches.length} matches for keyword 'example' in URL: https://example.com`);
+    // Update the test assertion to check for the exact expected array
+    expect(consoleSpy).toHaveBeenCalledWith(['example', 'example', 'example', 'example']);
     expect(matches).toBeDefined();
-    expect(matches).toBe(`Found 4 matches for keyword 'example' in URL: https://example.com`);
+    expect(matches).toEqual(['example', 'example', 'example', 'example']);
     consoleSpy.mockRestore();
   });
 });

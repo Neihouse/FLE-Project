@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Management</title>
+</head>
+<body>
+    <h1>Lead Management</h1>
+    <form id="create-lead-form">
+        <input type="text" id="name" name="name" placeholder="Name" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <input type="text" id="phone" name="phone" placeholder="Phone" required>
+        <button type="submit">Create Lead</button>
+    </form>
+    <hr>
+    <table id="leads-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Lead entries will be populated here -->
+        </tbody>
+    </table>
+    <script src="main.js"></script>
+</body>
+</html>

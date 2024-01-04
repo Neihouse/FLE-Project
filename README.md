@@ -18,28 +18,3 @@ The Facebook Lead Enhancer (FLE) project is designed to streamline the process o
 
 ## Getting Started
 To get started with the FLE project, clone the repository and install the necessary dependencies:
-
-```bash
- git clone https://github.com/Neihouse/FLE-Project.git
- cd FLE-Project
- npm install
-```
-
-Configure the environment variables by creating a `.env.local` file based on the `.env.example` template.
-
-Run the development server:
-
-```bash
- npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Documentation
-For detailed documentation on the API endpoints and features, refer to the `docs` directory.
-
-## Contributing
-Contributions to the FLE project are welcome. Please read the `CONTRIBUTING.md` file for guidelines on how to contribute.
-
-## License
-The FLE project is open-sourced software licensed under the MIT license. See the `LICENSE` file for more information.
