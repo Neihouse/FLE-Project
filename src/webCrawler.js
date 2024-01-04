@@ -8,8 +8,10 @@ class WebCrawler {
   async crawl(url, keyword = null) {
     if (this.visitedUrls.has(url)) {
       console.log(`Skipping already visited URL: ${url}`);
-      return;
+      return 'skipped';
     }
+
+    this.visitedUrls.add(url);
 
     try {
       const response = await axios.get(url);
@@ -19,13 +21,14 @@ class WebCrawler {
         const keywordRegex = new RegExp(keyword, 'gi');
         const matches = content.match(keywordRegex) || [];
         console.log(`Found ${matches.length} matches for keyword '${keyword}' in URL: ${url}`);
+        return matches;
       } else {
         console.log(content.substring(0, 500));
+        return content.substring(0, 500);
       }
-
-      this.visitedUrls.add(url);
     } catch (error) {
       console.error('Error during web crawl:', error.message);
+      return 'error';
     }
   }
 }

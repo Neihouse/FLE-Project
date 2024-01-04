@@ -8,6 +8,7 @@ async function getFacebookData() {
   try {
     const response = await axios.get(url);
     console.log('Facebook Graph API Response:', response.data);
+    return response.data; // Return the data property from the axios response
   } catch (error) {
     console.error('Error fetching data from Facebook Graph API:', error.message);
   }
