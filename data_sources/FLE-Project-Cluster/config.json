@@ -1,0 +1,10 @@
+{
+    "name": "FLE-Project-Cluster",
+    "type": "mongodb-atlas",
+    "config": {
+        "clusterName": "FLE-Project-Cluster",
+        "readPreference": "primary",
+        "wireProtocolEnabled": false
+    },
+    "version": 1
+}
